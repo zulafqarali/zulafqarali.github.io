@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zulafqar Ali</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%232563EB'/%3E%3Cpath d='M15 13l-5 7 5 7M25 13l5 7-5 7' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.5 12l-3 16' stroke='%23BFD5FE' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta name="description" content="Zulafqar Ali, Principal Software Engineer based in Lahore, Pakistan. 10+ years of PHP, Laravel, Symfony and microservices on AWS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<meta name="theme-color" content="#0A1630">
+<meta property="og:title" content="Zulafqar Ali, Principal Software Engineer">
+<meta property="og:description" content="Principal Software Engineer in Lahore, Pakistan, open to remote. 10+ years of PHP (Laravel, Symfony, Yii2), microservices on AWS serving millions of users, SuiteCRM platforms with AI-assisted screening, and teams of 4 to 6 engineers led.">
+<meta property="og:url" content="https://zulafqarali.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zulafqar Ali">
+<link rel="canonical" href="https://zulafqarali.github.io/">
+<style>
+html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* Layout: navy hero band with an at-a-glance panel, then calm white sections on a 12-col rhythm. One accent (blue) used sparingly. */
+:root{
+  --bg:#F5F7FA; --surface:#FFFFFF; --sunk:#EEF2F6; --ink:#0F1B2D; --muted:#566275; --line:#DFE5EC;
+  --accent:#1D4ED8; --accent-strong:#1E40AF; --accent-soft:#E4EBFC;
+  --hero-bg:#0A1630; --hero-fg:#F2F6FB; --hero-muted:#A9B8CC; --hero-line:rgba(255,255,255,.12);
+  --shadow:0 1px 2px rgba(15,27,45,.05),0 8px 24px rgba(15,27,45,.07);
+  --f-display:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --maxw:1340px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A1220; --surface:#111C2E; --sunk:#0E1828; --ink:#E8EEF6; --muted:#9AA8BB; --line:#22314A;
+  --accent:#3B82F6; --accent-strong:#93B4FB; --accent-soft:#132449;
+  --hero-bg:#07152A; --hero-fg:#F2F6FB; --hero-muted:#A9B8CC; --hero-line:rgba(255,255,255,.10);
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35); color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0A1220; --surface:#111C2E; --sunk:#0E1828; --ink:#E8EEF6; --muted:#9AA8BB; --line:#22314A;
+  --accent:#3B82F6; --accent-strong:#93B4FB; --accent-soft:#132449;
+  --hero-bg:#07152A; --hero-fg:#F2F6FB; --hero-muted:#A9B8CC; --hero-line:rgba(255,255,255,.10);
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35); color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:clamp(16px,3.2vw,48px)}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.015em}
+.label{font:600 12px/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-strong)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--hero-bg);border-bottom:1px solid var(--hero-line);color:var(--hero-fg);transition:box-shadow .2s}
+.nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 16px var(--f-display);color:var(--hero-fg);white-space:nowrap}
+.logo-mark{width:34px;height:34px;flex:none;transition:transform .25s}
+.mark:hover .logo-mark{transform:translateY(-1px) rotate(-4deg)}
+.nav ul{display:flex;gap:2px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav ul a{display:block;padding:8px 12px;border-radius:6px;text-decoration:none;font-size:14.5px;color:var(--hero-muted);transition:color .2s,background .2s}
+.nav ul a:hover,.nav ul a.on{color:#fff;background:rgba(255,255,255,.08)}
+.icon-btn{display:grid;place-items:center;width:38px;height:38px;border-radius:8px;border:1px solid var(--hero-line);background:transparent;color:var(--hero-fg);cursor:pointer}
+.icon-btn:hover{background:rgba(255,255,255,.08)}
+.icon-btn svg{width:18px;height:18px}
+.menu-btn{display:none}
+.menu-btn .i-close{display:none}
+.nav.open .menu-btn .i-open{display:none}
+.nav.open .menu-btn .i-close{display:block}
+@media (max-width:1060px){
+  .nav .menu-btn{display:grid;margin-left:auto}
+  .nav ul{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:2px;margin:0;padding:8px clamp(16px,4vw,32px) 16px;background:var(--hero-bg);border-bottom:1px solid var(--hero-line);box-shadow:0 18px 30px rgba(0,0,0,.28);max-height:calc(100dvh - 64px);overflow-y:auto}
+  .nav.open ul{display:flex}
+  .nav ul a{padding:13px 14px;font-size:16px;border-radius:8px}
+}
+@media (max-width:380px){.mark{font-size:15px;gap:8px}.logo-mark{width:30px;height:30px}.nav .wrap{gap:10px}}
+
+/* hero */
+.hero{position:relative;background:var(--hero-bg);color:var(--hero-fg);padding-block:clamp(36px,5vw,64px) clamp(40px,5vw,64px);overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(600px 380px at 85% 10%,rgba(37,99,235,.32),transparent 70%),
+  radial-gradient(520px 360px at 5% 100%,rgba(30,64,175,.30),transparent 70%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;background-image:linear-gradient(var(--hero-line) 1px,transparent 1px),linear-gradient(90deg,var(--hero-line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 70% 30%,#000 10%,transparent 65%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+@media (max-width:920px){.hero .wrap{grid-template-columns:1fr}}
+.avail{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;border:1px solid rgba(96,165,250,.40);background:rgba(37,99,235,.18);font:500 13.5px var(--f-body);color:#BFD5FE}
+.avail i{width:8px;height:8px;border-radius:50%;background:#60A5FA;animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(96,165,250,.55)}80%,100%{box-shadow:0 0 0 9px rgba(96,165,250,0)}}
+.hero h1{margin-top:22px;font-size:clamp(44px,7vw,80px);font-weight:800;line-height:1;letter-spacing:-.035em}
+.hero .role{margin-top:14px;font:600 clamp(19px,2.2vw,24px)/1.3 var(--f-display);color:#93C5FD}
+.hero .lead{max-width:36em;margin:20px 0 0;font-size:clamp(16px,1.5vw,18px);color:var(--hero-muted)}
+.hero .lead strong{color:var(--hero-fg);font-weight:500}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin:22px 0 0;padding:0;list-style:none;font-size:14.5px;color:var(--hero-muted)}
+.facts li{display:flex;align-items:center;gap:8px}
+.facts svg{width:16px;height:16px;color:#93C5FD;flex:none}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+@media (min-width:1200px){.cta{flex-wrap:nowrap}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:10px;font:600 15px var(--f-body);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .15s,background .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:16px;height:16px}
+.btn.primary{background:#2563EB;color:#FFFFFF;box-shadow:0 10px 24px -10px rgba(37,99,235,.75)}
+.btn.primary:hover{background:#1D4ED8}
+.btn.ghost{border-color:rgba(255,255,255,.25);color:var(--hero-fg)}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+@media (max-width:560px){.cta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.btn{justify-content:center;padding:12px 10px;font-size:14px;white-space:normal;text-align:center;line-height:1.3}.btn svg{display:none}}
+
+.glance{position:relative;padding:28px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid var(--hero-line);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.profile{display:flex;align-items:center;gap:16px;padding-bottom:22px;border-bottom:1px solid var(--hero-line)}
+.photo{flex:none;width:84px;height:84px;border-radius:50%;padding:3px;background:linear-gradient(140deg,#60A5FA,#1D4ED8);display:grid;place-items:center}
+.photo span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--hero-bg);border:3px solid var(--hero-bg);font:800 26px var(--f-display);color:#93C5FD;letter-spacing:-.02em}
+.profile b{display:block;font:700 18px var(--f-display)}
+.profile span.p-role{font-size:14px;color:var(--hero-muted)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:22px;background:var(--hero-line);border-radius:12px;overflow:hidden}
+.stat{padding:18px;background:var(--hero-bg)}
+.stat b{display:block;font:800 30px/1.1 var(--f-display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:#fff}
+.stat b em{font-style:normal;color:#93C5FD}
+.stat span{display:block;margin-top:4px;font-size:13px;line-height:1.4;color:var(--hero-muted)}
+.stack{margin-top:20px;display:flex;flex-wrap:wrap;gap:6px}
+.stack span{font-size:12.5px;padding:5px 10px;border-radius:6px;background:rgba(255,255,255,.07);color:var(--hero-fg)}
+
+/* sections */
+section.block{padding-block:clamp(24px,3vw,36px);scroll-margin-top:72px}
+section.block + section.block{border-top:1px solid var(--line)}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}
+.head > div{min-width:0}
+.head h2{margin-top:8px;font-size:clamp(30px,4vw,44px);font-weight:800;line-height:1.1}
+.head p{margin:12px 0 0;max-width:40em;color:var(--muted)}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr;gap:18px}
+.about .text{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:0 40px;align-items:start}
+.about .text p{grid-column:1;margin:0 0 12px;font-size:17px;color:var(--muted);max-width:40em}
+.about .text p:last-of-type{margin-bottom:0}
+.about .text p:first-child{font-size:clamp(19px,2vw,22px);line-height:1.5;color:var(--ink);font-family:var(--f-display);font-weight:600;letter-spacing:-.01em}
+.focus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;grid-column:2;grid-row:1 / span 3;margin-top:0}
+.focus div{padding:14px 16px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.focus b{display:block;font:700 15.5px var(--f-display);margin-bottom:4px}
+.focus span{font-size:14.5px;color:var(--muted)}
+.focus svg{width:22px;height:22px;color:var(--accent);margin-bottom:10px}
+@media (max-width:900px){.about .text{grid-template-columns:1fr}.focus{grid-column:1;grid-row:auto;margin-top:16px}}
+
+/* results */
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:960px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.metrics{grid-template-columns:1fr}}
+.metric{display:flex;flex-direction:column;gap:6px;padding:18px 20px;border-radius:14px;background:var(--surface);border:1px solid var(--line);transition:transform .2s,box-shadow .2s,border-color .2s}
+.metric:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+.metric .num{font:800 clamp(34px,4vw,44px)/1 var(--f-display);letter-spacing:-.03em;color:var(--ink);font-variant-numeric:tabular-nums}
+.metric .num em{font-style:normal;color:var(--accent)}
+.metric p{margin:0;font-size:14.5px;line-height:1.5;color:var(--muted)}
+.metric .co{margin-top:auto;padding-top:10px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* experience */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chip{font:500 14px var(--f-body);padding:8px 15px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer;transition:all .2s}
+.chip:hover{color:var(--ink);border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip .n{font-size:12px;opacity:.65;margin-left:5px}
+.jobs{display:grid;gap:16px}
+.job{display:grid;grid-template-columns:1fr;gap:14px;padding:clamp(18px,2.4vw,26px);border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+.job-meta{min-width:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:16px;align-items:center}
+.job .logo{grid-row:1 / span 3;display:grid;place-items:center;width:56px;height:56px;border-radius:14px;background:var(--accent-soft);color:var(--accent-strong);font:800 20px var(--f-display);border:1px solid var(--line);box-shadow:0 2px 8px rgba(15,27,45,.06)}
+.job-meta h3{grid-column:2;font-size:21px;line-height:1.25}
+.job-meta .co{grid-column:2;margin-top:2px;font-weight:600;color:var(--accent-strong)}
+.job-meta .when{grid-column:2;margin-top:2px;font-size:14px;color:var(--muted)}
+.job ul{list-style:none;margin:0;padding:0;display:block;columns:2;column-gap:32px}
+.job li{position:relative;break-inside:avoid;padding:8px 10px 8px 26px;border-radius:8px;color:var(--muted);transition:opacity .25s,background .25s}
+.job li::before{content:"";position:absolute;left:10px;top:18px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.job li strong{font-weight:600;color:var(--ink)}
+.job li.dim{opacity:.25}
+.job li.hit{background:var(--accent-soft)}
+@media (max-width:860px){.job ul{columns:1}}
+
+/* skills */
+.search{position:relative;display:block;width:min(100%,340px)}
+.search input{width:100%;font:400 15px var(--f-body);padding:12px 14px 12px 42px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.search input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.search svg{position:absolute;left:14px;top:50%;width:17px;height:17px;transform:translateY(-50%);color:var(--muted)}
+.search-out{margin-top:8px;font-size:13px;color:var(--muted);min-height:1.4em}
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (min-width:1100px){.skills{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:920px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:580px){.skills{grid-template-columns:1fr}}
+.skill{padding:18px;border-radius:14px;background:var(--surface);border:1px solid var(--line);min-width:0;transition:opacity .25s}
+.skill.feature{grid-column:1 / -1;background:var(--hero-bg);border-color:var(--hero-bg);color:var(--hero-fg)}
+.skill.wide{grid-column:1 / -1}
+.skill h3{display:flex;justify-content:space-between;gap:8px;font-size:16px;margin-bottom:14px}
+.skill h3 .count{font:500 13px var(--f-body);color:var(--muted)}
+.skill.feature h3{font-size:19px}
+.skill.feature h3 .count{color:var(--hero-muted)}
+.skill.feature .lede{margin:-6px 0 16px;font-size:15px;color:var(--hero-muted);max-width:52em}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:13.5px;line-height:1;padding:8px 11px;border-radius:7px;background:var(--sunk);color:var(--ink);transition:background .2s,color .2s}
+.skill.feature .tags span{background:rgba(255,255,255,.08);color:var(--hero-fg)}
+.tags span.match{background:var(--accent);color:#FFFFFF}
+.skill.miss{opacity:.3}
+
+/* credentials */
+.creds{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:12px}
+@media (max-width:920px){.creds{grid-template-columns:1fr}}
+.cred{padding:20px 22px;border-radius:14px;background:var(--surface);border:1px solid var(--line);min-width:0}
+.cred h3{font-size:18px;margin-bottom:18px}
+.cred ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.cred li{display:grid;gap:2px;padding-left:16px;border-left:2px solid var(--line)}
+.cred li:first-child{border-left-color:var(--accent)}
+.cred li b{font-weight:600}
+.cred li small{font-size:13.5px;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--hero-bg);color:var(--hero-fg);position:relative;overflow:hidden;isolation:isolate}
+.contact::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(640px 360px at 90% 0%,rgba(37,99,235,.28),transparent 70%)}
+section.block.contact{border-top:0}
+.contact .label{color:#93C5FD}
+.contact h2{margin-top:14px;font-size:clamp(32px,5vw,56px);font-weight:800;line-height:1.05;letter-spacing:-.03em;max-width:16ch}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center}
+@media (max-width:900px){.contact-grid{grid-template-columns:minmax(0,1fr)}}
+.contact .pitch p.sub{margin:14px 0 22px;max-width:38em;color:var(--hero-muted)}
+.contact-cta{display:flex;flex-wrap:wrap;gap:10px}
+.contact-cta .btn svg{width:17px;height:17px}
+@media (max-width:560px){.contact-cta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.contact-cta .btn{justify-content:center;padding:12px 8px;font-size:14px;white-space:nowrap}}
+.rows{display:grid;gap:10px;min-width:0}
+.crow{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid var(--hero-line);color:var(--hero-fg);text-decoration:none;min-width:0;transition:background .2s,border-color .2s}
+.crow:hover{background:rgba(255,255,255,.08);border-color:rgba(96,165,250,.45)}
+.cic{display:grid;place-items:center;width:42px;height:42px;border-radius:10px;background:rgba(37,99,235,.28);color:#93C5FD;flex:none}
+.cic svg{width:20px;height:20px}
+.ctext{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.clbl{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--hero-muted)}
+.cval{font-size:16px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;user-select:all}
+.cact{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;border:1px solid var(--hero-line);background:transparent;color:#93C5FD;cursor:pointer;flex:none;transition:background .2s,color .2s}
+.cact svg{width:18px;height:18px}
+.cact:hover,.crow:hover .cact{background:rgba(37,99,235,.3);color:#fff}
+.cact.done{color:#34D399;border-color:rgba(52,211,153,.6)}
+@media (max-width:420px){.crow{padding:12px;gap:10px}.cic{width:36px;height:36px}.cval{font-size:15px}}
+
+footer{background:var(--hero-bg);color:var(--hero-muted);padding-block:24px 36px;font-size:13.5px;border-top:1px solid var(--hero-line)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);z-index:70;padding:12px 18px;border-radius:10px;background:var(--ink);color:var(--bg);font:500 14px var(--f-body);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;max-width:calc(100vw - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* load-in for hero only, from a visible state */
+@keyframes rise{from{transform:translateY(12px)}to{transform:none}}
+.hero .intro > *,.glance{animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+.hero .intro > *:nth-child(2){animation-delay:.05s}.hero .intro > *:nth-child(3){animation-delay:.1s}
+.hero .intro > *:nth-child(4){animation-delay:.15s}.glance{animation-delay:.2s}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+@media (min-width:1600px){:root{--maxw:1520px}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Zulafqar Ali, back to top"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#2563EB"/><path d="M15 13l-5 7 5 7M25 13l5 7-5 7" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 12l-3 16" stroke="#BFD5FE" stroke-width="2.2" stroke-linecap="round"/></svg>Zulafqar Ali</a>
+    <ul id="navList">
+      <li><a href="#about">Who I Am</a></li>
+      <li><a href="#results">Proven Impact</a></li>
+      <li><a href="#experience">Career</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#contact">Get in Touch</a></li>
+    </ul>
+    <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navList">
+      <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch colour theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="intro">
+      <div><span class="avail"><i></i>Open to Remote · Lahore, Pakistan (UTC+5)</span></div>
+      <h1>Zulafqar Ali</h1>
+      <div class="role">Principal Software Engineer · PHP, Laravel &amp; Microservices on AWS</div>
+      <p class="lead">10+ years building and scaling <strong>backend systems in PHP</strong> (Laravel, Symfony, Yii2). Delivered microservices platforms on AWS serving <strong>millions of users</strong>, SuiteCRM solutions for healthcare recruitment with AI-assisted screening, and real-time QuickBooks synchronization for tax and accounting workflows. Has led teams of 4 to 6 engineers in cross-functional teams of up to 40.</p>
+      <ul class="facts">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lahore, Pakistan · UTC+5</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Open to Remote Roles</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>10+ Years of Experience</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21l5-3 5 3-1.5-8.5"/></svg>Led Teams of 4–6 Engineers</li>
+      </ul>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Contact Me
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn ghost" href="Zulafqar_Ali_Resume.pdf" download="Zulafqar_Ali_Resume.pdf">Download Resume <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M3 13.5h10"/></svg></a>
+        <a class="btn ghost" href="https://github.com/zulafqarali" target="_blank" rel="noopener">View GitHub</a>
+      </div>
+    </div>
+
+    <aside class="glance" aria-label="At a glance">
+      <div class="profile">
+        <div class="photo" aria-hidden="true"><span>ZA</span></div>
+        <div>
+          <b>Zulafqar Ali</b>
+          <span class="p-role">Principal Software Engineer · Tkxel, Lahore</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>10<em>+</em></b><span>years building backend systems</span></div>
+        <div class="stat"><b>Millions</b><span>users on platforms delivered</span></div>
+        <div class="stat"><b>7,000<em>+</em></b><span>CRM users on the healthcare platform</span></div>
+        <div class="stat"><b>40</b><span>engineer cross-functional team</span></div>
+      </div>
+      <div class="stack" aria-label="Core stack">
+        <span>PHP</span><span>Laravel</span><span>Symfony</span><span>Microservices</span><span>AWS</span><span>MySQL</span><span>Redis</span><span>Docker</span><span>SuiteCRM</span>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<main>
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="head"><div>
+        <span class="label">Who I Am</span>
+        <h2>Backend Systems from Requirements to Production</h2>
+      </div></div>
+      <div class="about">
+        <div class="text">
+          <p>I'm a Principal Software Engineer with 10+ years of experience building and scaling backend systems in PHP (Laravel, Symfony, Yii2).</p>
+          <p>Most recently at Tkxel, I deliver microservices platforms on AWS serving millions of users — including an online ordering platform across 80+ restaurant branches and a SuiteCRM healthcare recruitment solution used by 7,000+ CRM users with AI-assisted screening and job matching.</p>
+          <p>Strong in requirements analysis, solution design, REST API development, CI/CD, production debugging, code review and mentoring. I've led teams of 4 to 6 engineers and collaborated in cross-functional teams of up to 40.</p>
+        </div>
+        <div class="focus">
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg>
+            <b>Backend &amp; Microservices</b>
+            <span>Laravel and Symfony services on AWS, REST APIs and OOP design that scale to millions of users.</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M12 10v6M9 13h6"/></svg>
+            <b>CRM &amp; Integrations</b>
+            <span>SuiteCRM and SugarCRM builds with real-time QuickBooks sync, payment gateways and third-party APIs.</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9.5a4.25 4.25 0 0 1-.5 8.5z"/></svg>
+            <b>Cloud &amp; CI/CD</b>
+            <span>Docker, AWS pipelines and GitLab CI/CD for automated, repeatable releases.</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 20a6 6 0 0 0-3-5.2"/></svg>
+            <b>Leadership &amp; Mentoring</b>
+            <span>Teams of 4–6 engineers, code review, coding standards and delivery in teams up to 40.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="results">
+    <div class="wrap">
+      <div class="head"><div>
+        <span class="label">Proven Impact</span>
+        <h2>Measurable Impact</h2>
+        <p>Outcomes from shipped work at Tkxel, CarSwitch, Rolustech and EGlobal Solution.</p>
+      </div></div>
+      <div class="metrics">
+        <div class="metric"><div class="num">10<em>+</em></div><p>Years building backend systems in PHP, from web development to principal engineer.</p><div class="co">2014 – Present</div></div>
+        <div class="metric"><div class="num">Millions</div><p>Users on the Cafe Zupas online ordering platform across 80+ restaurant branches.</p><div class="co">Tkxel</div></div>
+        <div class="metric"><div class="num">7,000<em>+</em></div><p>CRM users on the healthcare recruitment platform with AI-assisted screening.</p><div class="co">Tkxel</div></div>
+        <div class="metric"><div class="num">40</div><p>Engineer cross-functional team I delivered requirements and solutions within.</p><div class="co">Tkxel</div></div>
+        <div class="metric"><div class="num">200<em>+</em></div><p>CRM users on the tax audit and accounting platform ttgat.us.</p><div class="co">Rolustech</div></div>
+        <div class="metric"><div class="num">50 GB</div><p>Financial data re-engineered and synced in real time with QuickBooks Online.</p><div class="co">Rolustech</div></div>
+        <div class="metric"><div class="num">4<em>–</em>6</div><p>Engineers led per project, running scrums and shipping on schedule.</p><div class="co">Rolustech</div></div>
+        <div class="metric"><div class="num">Millions</div><p>Requests served by the Xension device insurance and repair CRM.</p><div class="co">Rolustech</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="experience">
+    <div class="wrap">
+      <div class="head"><div>
+        <span class="label">Career</span>
+        <h2>Work History</h2>
+        <p>Filter by focus area to see where each kind of work happened.</p>
+      </div></div>
+      <div class="filters" id="filters" role="group" aria-label="Filter work history by focus area"></div>
+      <div class="jobs" id="jobs"></div>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="label">Skills</span>
+          <h2>Tools and Expertise</h2>
+          <p>Looking for a specific tool? Search to highlight it.</p>
+        </div>
+        <div>
+          <label class="search">
+            <span class="sr-only" hidden>Search skills</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input type="search" id="skillSearch" placeholder="Search skills…" autocomplete="off">
+          </label>
+          <div class="search-out" id="searchOut" aria-live="polite"></div>
+        </div>
+      </div>
+      <div class="skills" id="skillGrid"></div>
+    </div>
+  </section>
+
+  <section class="block" id="credentials">
+    <div class="wrap">
+      <div class="head"><div>
+        <span class="label">Credentials</span>
+        <h2>Certifications and Education</h2>
+      </div></div>
+      <div class="creds">
+        <div class="cred">
+          <h3>Education &amp; Certification</h3>
+          <ul>
+            <li><b>Bachelor of Science in Computer Science</b><small>The University of Lahore, 2012 – 2016</small></li>
+            <li><b>SugarCRM Developer Certification</b><small>SuiteCRM / SugarCRM platform development</small></li>
+          </ul>
+        </div>
+        <div class="cred">
+          <h3>Experience</h3>
+          <ul>
+            <li><b>10+ years in software engineering</b><small>Jul 2014 – Present</small></li>
+            <li><b>Principal Software Engineer</b><small>Tkxel · Dec 2022 – Present</small></li>
+            <li><b>Teams of 4 to 6 engineers led</b><small>Cross-functional teams up to 40</small></li>
+          </ul>
+        </div>
+        <div class="cred">
+          <h3>Languages &amp; Details</h3>
+          <ul>
+            <li><b>English</b><small>Professional working proficiency</small></li>
+            <li><b>Urdu</b><small>Native</small></li>
+            <li><b>Lahore, Pakistan (UTC+5)</b><small>Open to remote roles</small></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="pitch">
+          <span class="label">Get in Touch</span>
+          <h2>Looking for a Principal or Senior Backend Engineer?</h2>
+          <p class="sub">Based in Lahore, Pakistan (UTC+5) and open to remote work. 10+ years of PHP, Laravel and microservices delivery across online ordering, healthcare, tax and accounting, and CRM products.</p>
+          <div class="contact-cta">
+            <a class="btn primary" href="mailto:zulafqarali143@gmail.com">Email Me
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a class="btn ghost" href="Zulafqar_Ali_Resume.pdf" download="Zulafqar_Ali_Resume.pdf">Download Resume
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M3 13.5h10"/></svg></a>
+          </div>
+        </div>
+        <div class="rows">
+          <div class="crow">
+            <span class="cic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <div class="ctext">
+              <span class="clbl">Email</span>
+              <span class="cval" id="v-email">zulafqarali143@gmail.com</span>
+            </div>
+            <button class="cact" type="button" data-copy="v-email" aria-label="Copy email address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+          </div>
+          <div class="crow">
+            <span class="cic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4 5.2 2 2 0 0 1 6 3z"/></svg></span>
+            <div class="ctext">
+              <span class="clbl">Phone</span>
+              <span class="cval" id="v-phone">+92-344-6800-107</span>
+            </div>
+            <button class="cact" type="button" data-copy="v-phone" aria-label="Copy phone number"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+          </div>
+          <a class="crow" href="https://github.com/zulafqarali" target="_blank" rel="noopener">
+            <span class="cic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5a3 3 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.6a5 5 0 0 0-1.4-3.5 4.6 4.6 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.3 12.3 0 0 0-6.5 0C6.6 2.4 5.5 2.7 5.5 2.7a4.6 4.6 0 0 0-.1 3.5A5 5 0 0 0 4 9.7c0 5.1 3.1 6.3 6.1 6.6a3 3 0 0 0-.9 2.6V21"/></svg></span>
+            <div class="ctext">
+              <span class="clbl">GitHub</span>
+              <span class="cval">github.com/zulafqarali</span>
+            </div>
+            <span class="cact" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Zulafqar Ali</span>
+    <span>Principal Software Engineer · Lahore, Pakistan</span>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(s,c){return (c||document).querySelector(s)};
+  var $$ = function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  /* ---------- data ---------- */
+  var TAGS = {
+    backend:'Backend & APIs', crm:'CRM & Integrations', ai:'AI Features',
+    lead:'Leadership', cloud:'Cloud & CI/CD', frontend:'Frontend & Web'
+  };
+
+  var JOBS = [
+    {co:'Tkxel', ini:'T', role:'Principal Software Engineer', when:'Dec 2022 – Present · Lahore, Pakistan', items:[
+      ['backend cloud','Built backend services on a <strong>Laravel microservices architecture on AWS</strong> powering online ordering across 80+ branches and millions of users.'],
+      ['backend crm','Implemented custom item preparation, loyalty programs, automatic kitchen-to-customer order status updates, payment gateway integrations and delivery workflows.'],
+      ['cloud backend','Set up <strong>AWS CI/CD pipelines</strong> for automated releases, and debugged and resolved production issues on the live system.'],
+      ['lead','Analyzed client requirements and translated them into technical solutions within a <strong>40-engineer cross-functional team</strong>.'],
+      ['crm ai','Building a <strong>SuiteCRM healthcare recruitment platform</strong> for 7,000+ CRM users with AI-assisted candidate assessments, resume screening, survey generation and profile-to-job matching.'],
+      ['backend lead','Defined solution architecture from client requirements and implemented <strong>eDocs</strong>, a document digitization and e-signature application (team of 12).'],
+      ['lead','Mentor junior developers, conduct code reviews and enforce coding standards.']
+    ]},
+    {co:'CarSwitch', ini:'C', role:'Senior Software Engineer', when:'Jan 2022 – Dec 2022 · Lahore, Pakistan', items:[
+      ['lead backend','Translated product-team requirements into technical solutions, breaking down tasks and estimating effort.'],
+      ['backend','Delivered application features on time using PHP, Yii2 and sound engineering practices.'],
+      ['backend','Diagnosed and resolved complex design and technical issues.'],
+      ['lead','Provided technical support for clients across local and global sites, and delivered internal tech sessions to the engineering team.']
+    ]},
+    {co:'Rolustech', ini:'R', role:'Senior Software Engineer', when:'Jan 2020 – Jan 2022 · Lahore, Pakistan', items:[
+      ['crm backend','Customized SuiteCRM into <strong>ttgat.us</strong>, a tax audit and accounting platform covering business audits, invoicing, payments and work-progress tracking for 200+ CRM users.'],
+      ['backend','Re-engineered data-processing and accounting-book workflows handling roughly <strong>50 GB of financial data</strong>.'],
+      ['crm backend','Built <strong>real-time, two-way synchronization</strong> of financial data between the CRM and QuickBooks Online.'],
+      ['crm backend','Automated manual insurance and device-repair processes in <strong>Xension</strong>, a custom CRM with role-based access and task assignment for hundreds of users, supporting millions of requests.'],
+      ['lead','Led teams of 4 to 6 engineers and QAs across multiple projects, running daily scrums and bi-weekly sprints and shipping on schedule.']
+    ]},
+    {co:'Rolustech', ini:'R', role:'Software Engineer', when:'Mar 2017 – Dec 2019 · Lahore, Pakistan', items:[
+      ['backend','Worked with development and QA teams to design and build solutions meeting client requirements for functionality, scalability and performance.'],
+      ['backend','Identified and resolved complex design and technical issues across projects.'],
+      ['lead','Provided end-user support to clients on local and global sites.']
+    ]},
+    {co:'EGlobal Solution', ini:'E', role:'Web Developer', when:'Jul 2014 – Jan 2017 · Lahore, Pakistan', items:[
+      ['frontend','Converted design mockups into working websites using HTML, JavaScript, AJAX and JSON.'],
+      ['frontend backend','Planned and implemented website changes and integrations to streamline client business operations.']
+    ]}
+  ];
+
+  var SK = [
+    {t:'Backend & PHP Frameworks', feature:true, lede:'10+ years across Laravel, Symfony and Yii2 — REST APIs, microservices and OOP design built to scale to millions of users on AWS.', tags:['PHP','Laravel','Symfony','Yii2','CodeIgniter','Zend','REST APIs','JSON','Microservices','OOP','MVC','Design patterns','Python (working knowledge)']},
+    {t:'Databases & Caching', tags:['MySQL','AWS Aurora','Redis','MS SQL','SQLite']},
+    {t:'Cloud & DevOps', tags:['AWS','AWS Aurora','CI/CD pipelines','Docker','GitLab CI/CD','Git','GitHub','Bitbucket']},
+    {t:'CRM & Integrations', tags:['SuiteCRM','SugarCRM','QuickBooks Online API','QuickBooks PHP SDK','Payment gateways','Third-party APIs']},
+    {t:'Frontend', tags:['JavaScript','jQuery','AJAX','HTML5','CSS3','Vue.js','AngularJS']},
+    {t:'Practices & Tools', tags:['Agile / Scrum','Sprint planning','Code review','Requirements analysis','Solution design','Technical mentoring','Jira','Teamwork','Trello','Redmine','PHPStorm']},
+    {t:'Industry Domains', wide:true, tags:['Online ordering & food delivery','Healthcare recruitment','Tax & accounting','Document digitization & e-signature','Insurance & device repair','Automotive marketplace','CRM platforms']}
+  ];
+
+  var esc = function(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')};
+
+  /* ---------- theme ---------- */
+  try{
+    var saved = localStorage.getItem('za-theme');
+    if(saved) document.documentElement.dataset.theme = saved;
+    $('#themeBtn').addEventListener('click', function(){
+      var isDark = document.documentElement.dataset.theme
+        ? document.documentElement.dataset.theme === 'dark'
+        : matchMedia('(prefers-color-scheme: dark)').matches;
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem('za-theme', next);
+    });
+  }catch(e){}
+
+  /* ---------- experience: render ---------- */
+  var jobsEl = $('#jobs');
+  jobsEl.innerHTML = JOBS.map(function(j){
+    return '<article class="job">'
+      + '<div class="job-meta"><div class="logo" aria-hidden="true">' + esc(j.ini) + '</div>'
+      + '<h3>' + esc(j.role) + '</h3>'
+      + '<div class="co">' + esc(j.co) + '</div>'
+      + '<div class="when">' + esc(j.when) + '</div></div>'
+      + '<ul>' + j.items.map(function(it){
+          return '<li data-t="' + esc(it[0]) + '">' + it[1] + '</li>';
+        }).join('') + '</ul></article>';
+  }).join('');
+
+  /* ---------- experience: filters ---------- */
+  var filtersEl = $('#filters');
+  var allLi = $$('#jobs li');
+  var count = function(k){return allLi.filter(function(li){return (' '+li.dataset.t+' ').indexOf(' '+k+' ') > -1}).length};
+
+  filtersEl.innerHTML = '<button class="chip" type="button" data-f="all" aria-pressed="true">All<span class="n">' + allLi.length + '</span></button>'
+    + Object.keys(TAGS).map(function(k){
+        return '<button class="chip" type="button" data-f="' + k + '" aria-pressed="false">' + esc(TAGS[k]) + '<span class="n">' + count(k) + '</span></button>';
+      }).join('');
+
+  filtersEl.addEventListener('click', function(e){
+    var chip = e.target.closest('.chip');
+    if(!chip) return;
+    $$('.chip', filtersEl).forEach(function(c){c.setAttribute('aria-pressed', String(c === chip))});
+    var f = chip.dataset.f;
+    allLi.forEach(function(li){
+      var hit = f === 'all' || (' '+li.dataset.t+' ').indexOf(' '+f+' ') > -1;
+      li.classList.toggle('dim', f !== 'all' && !hit);
+      li.classList.toggle('hit', f !== 'all' && hit);
+    });
+  });
+
+  /* ---------- skills: render + search ---------- */
+  var grid = $('#skillGrid');
+  var totalTags = 0;
+  grid.innerHTML = SK.map(function(s){
+    totalTags += s.tags.length;
+    return '<div class="skill' + (s.feature ? ' feature' : '') + (s.wide ? ' wide' : '') + '">'
+      + '<h3>' + esc(s.t) + '<span class="count">' + s.tags.length + '</span></h3>'
+      + (s.lede ? '<p class="lede">' + esc(s.lede) + '</p>' : '')
+      + '<div class="tags">' + s.tags.map(function(t){return '<span>' + esc(t) + '</span>'}).join('') + '</div></div>';
+  }).join('');
+
+  var out = $('#searchOut');
+  var idleMsg = totalTags + ' skills across ' + SK.length + ' areas';
+  out.textContent = idleMsg;
+
+  $('#skillSearch').addEventListener('input', function(){
+    var q = this.value.trim().toLowerCase();
+    var hits = 0;
+    $$('.skill', grid).forEach(function(card){
+      var cardHits = 0;
+      $$('.tags span', card).forEach(function(tag){
+        var match = q && tag.textContent.toLowerCase().indexOf(q) > -1;
+        tag.classList.toggle('match', !!match);
+        if(match) cardHits++;
+      });
+      hits += cardHits;
+      card.classList.toggle('miss', !!q && cardHits === 0);
+    });
+    if(!q) out.textContent = idleMsg;
+    else if(!hits) out.textContent = 'No match for “' + this.value.trim() + '”';
+    else out.textContent = hits + ' match' + (hits === 1 ? '' : 'es') + ' for “' + this.value.trim() + '”';
+  });
+
+  /* ---------- copy + toast ---------- */
+  var toast = $('#toast'), toastTimer;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){toast.classList.remove('show')}, 2200);
+  }
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-copy]');
+    if(!btn) return;
+    var val = $('#' + btn.dataset.copy).textContent.trim();
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(val).then(function(){
+        btn.classList.add('done');
+        setTimeout(function(){btn.classList.remove('done')}, 1600);
+        showToast('Copied ' + val);
+      }).catch(fallback);
+    } else fallback();
+
+    function fallback(){
+      var node = $('#' + btn.dataset.copy), range = document.createRange();
+      range.selectNodeContents(node);
+      var sel = getSelection(); sel.removeAllRanges(); sel.addRange(range);
+      showToast('Selected. Press Ctrl+C to copy.');
+    }
+  });
+
+  /* ---------- nav: mobile menu, scrolled, scroll spy ---------- */
+  var nav = $('#nav'), menuBtn = $('#menuBtn');
+  function setMenu(open){
+    nav.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  menuBtn.addEventListener('click', function(){setMenu(!nav.classList.contains('open'))});
+  $$('#navList a').forEach(function(a){a.addEventListener('click', function(){setMenu(false)})});
+  document.addEventListener('keydown', function(e){if(e.key === 'Escape') setMenu(false)});
+  document.addEventListener('click', function(e){if(!nav.contains(e.target)) setMenu(false)});
+
+  addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', scrollY > 8);
+  }, {passive:true});
+
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting) return;
+      $$('.nav ul a').forEach(function(a){
+        a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id);
+      });
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  $$('section.block').forEach(function(s){spy.observe(s)});
+})();
+</script>
+</body>
+</html>
