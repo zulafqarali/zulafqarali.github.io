@@ -20,8 +20,11 @@ A single-page personal portfolio/resume site for **Zulafqar Ali** (Principal Sof
 | File | Purpose |
 |---|---|
 | `index.html` | The entire site: inline CSS (in `<style>`), markup, inline JS (one IIFE `<script>` at the end). ~700 lines. |
-| `resume.html` | Printable resume source (A4, print CSS). Rendered to PDF — see §6. Also live at `/resume.html`. |
+| `resume.html` | Printable resume source (A4, print CSS) — primary backend/PHP resume. Rendered to PDF — see §6. Also live at `/resume.html`. |
+| `resume-python.html` | **Targeted resume** (Python · FastAPI · LLMs · GCP stack), same design. **Deliberately NOT linked from `index.html`** — it is public via the repo URL but not part of the site navigation/CTAs. |
 | `Zulafqar_Ali_Resume.pdf` | Generated from `resume.html`. Linked from 2 places in `index.html` (hero CTA + contact CTA, each with `href` + `download`). |
+| `Zulafqar_Ali_Resume_Python_FastAPI.pdf` | Generated from `resume-python.html`. Not linked from the site. |
+| `learn/` | Interview study material (Markdown, not linked from the site): `README.md` (4-week roadmap), `python.md`, `fastapi.md` (deep Q&A), `stack.md` (GCP, LLM/LangChain, Vue, Kibana, Hadoop, Grafana). |
 | `og-image.png` | 1200×630 social/share image, referenced by Open Graph + Twitter tags and JSON-LD. |
 | `robots.txt` | Allows all crawlers, points to sitemap. |
 | `sitemap.xml` | Single URL entry. **Update `<lastmod>` when content changes.** |
@@ -98,12 +101,16 @@ Metrics (`#results`), about paragraphs, glance stats, credentials. Keep numbers 
 
 ## 6. Regenerating the resume PDF
 
-The PDF is **generated**, not hand-edited. After any change to `resume.html`:
+The PDF is **generated**, not hand-edited. After any change to `resume.html` (or `resume-python.html` — same command with different filenames):
 
 ```bash
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
   --headless=new --disable-gpu --no-pdf-header-footer \
   --print-to-pdf=Zulafqar_Ali_Resume.pdf "file://$PWD/resume.html"
+
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+  --headless=new --disable-gpu --no-pdf-header-footer \
+  --print-to-pdf=Zulafqar_Ali_Resume_Python_FastAPI.pdf "file://$PWD/resume-python.html"
 ```
 
 - Verify visually: render page to PNG with PyMuPDF (`pymupdf`) and inspect; it must stay **2 pages, A4**.

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Zulafqar Ali — Resume (Python · FastAPI · LLMs)</title>
+<style>
+  @page{size:A4;margin:0}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    width:210mm;min-height:297mm;padding:11mm 12mm 10mm;
+    font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size:9.3pt;line-height:1.42;color:#334155;background:#fff;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;
+  }
+  h1,h2,h3{margin:0}
+  a{color:inherit;text-decoration:none}
+  .navy{color:#0F1B2D}
+  .blue{color:#1D4ED8}
+
+  /* ---------- header ---------- */
+  header{display:flex;gap:14px;align-items:flex-start}
+  .hd{flex:1;min-width:0}
+  h1{font-size:25pt;line-height:1.05;letter-spacing:-.02em;color:#0F1B2D;font-weight:700}
+  .role{margin-top:5px;font-size:12.5pt;font-weight:700;color:#1D4ED8}
+  .role .sep{color:#94A3B8;font-weight:400;padding:0 6px}
+  .contacts{margin-top:7px;display:flex;flex-wrap:wrap;gap:5px 18px;font-size:9.2pt;color:#334155}
+  .contacts div{display:flex;align-items:center;gap:6px}
+  .contacts svg{width:11px;height:11px;color:#1D4ED8;flex:none}
+  .avatar{flex:none;width:62px;height:62px;border-radius:50%;padding:2px;background:#E2E8F0}
+  .avatar span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;
+    background:#0F1B2D;color:#93C5FD;font-size:20pt;font-weight:700;letter-spacing:-.02em}
+
+  /* ---------- section heading ---------- */
+  .sec{display:flex;align-items:center;gap:8px;margin:13px 0 7px}
+  .sec::before{content:"";width:4px;height:14px;background:#2563EB;border-radius:1px;flex:none}
+  .sec h2{font-size:11.6pt;font-weight:700;letter-spacing:.05em;color:#16233B;white-space:nowrap}
+  .sec::after{content:"";flex:1;height:1px;background:#D8DEE7}
+
+  p.summary{margin:0;font-size:9.4pt;color:#334155}
+  p.summary strong{color:#0F1B2D}
+
+  /* ---------- kpi strip ---------- */
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:9px}
+  .kpi{border-left:3px solid #2563EB;background:#F1F5F9;padding:7px 9px;border-radius:3px}
+  .kpi b{display:block;font-size:13pt;color:#0F1B2D;letter-spacing:-.01em}
+  .kpi span{display:block;margin-top:1px;font-size:8.1pt;line-height:1.3;color:#64748B}
+
+  /* ---------- experience ---------- */
+  .job{margin-top:9px}
+  .job-hd{display:flex;justify-content:space-between;align-items:baseline;gap:12px;break-after:avoid}
+  .job-hd .title{font-size:10.6pt;font-weight:700;color:#0F1B2D}
+  .job-hd .date{font-size:9pt;color:#64748B;white-space:nowrap}
+  .job-hd .co{font-size:9.8pt;font-weight:700;color:#1D4ED8}
+  .job-hd .co .loc{font-weight:400;color:#64748B}
+  ul.bul{margin:5px 0 0;padding-left:14px}
+  ul.bul li{margin:2.5px 0;font-size:9.25pt;color:#334155}
+  ul.bul li::marker{color:#2563EB}
+  ul.bul strong{color:#0F1B2D}
+
+  /* ---------- skills table ---------- */
+  .srow{display:grid;grid-template-columns:132px minmax(0,1fr);gap:14px;padding:5.5px 0;border-bottom:1px solid #E2E8F0}
+  .srow:last-child{border-bottom:0}
+  .srow b{font-size:9.4pt;color:#16233B}
+  .srow span{font-size:9.3pt;color:#334155}
+
+  .domains{font-size:9.4pt;color:#334155}
+  .domains i{font-style:normal;color:#2563EB;padding:0 2px}
+
+  ul.plain{margin:2px 0 0;padding-left:14px}
+  ul.plain li{margin:2.5px 0;font-size:9.4pt}
+  ul.plain li::marker{color:#2563EB}
+
+  .edu{margin-top:6px}
+  .edu .deg{font-size:10.4pt;font-weight:700;color:#0F1B2D}
+  .edu .yr{font-size:9.4pt;font-weight:400;color:#64748B;margin-left:8px}
+  .edu .inst{font-size:9.6pt;font-weight:700;color:#1D4ED8}
+
+  .note{display:flex;gap:8px;align-items:center;margin-top:8px;padding:6px 10px;
+    background:#EFF6FF;border-left:3px solid #2563EB;border-radius:3px}
+  .note svg{width:13px;height:13px;color:#2563EB;flex:none}
+  .note span{font-size:9.2pt;color:#334155}
+  .note b{color:#16233B}
+
+  .langs{display:flex;gap:26px;font-size:9.5pt}
+  .langs b{color:#0F1B2D}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd">
+    <h1>Zulafqar Ali</h1>
+    <div class="role">Principal Software Engineer<span class="sep">|</span>Python · FastAPI · LLMs · GCP</div>
+    <div class="contacts">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>zulafqarali143@gmail.com</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4 5.2 2 2 0 0 1 6 3z"/></svg>+92 344 6800 107</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lahore, Pakistan (UTC+5)</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>Open to Remote Roles</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>9+ Years of Experience</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Nationality: Pakistani</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg>linkedin.com/in/zulafqar-ali-076357104</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5a3 3 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.6a5 5 0 0 0-1.4-3.5 4.6 4.6 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.3 12.3 0 0 0-6.5 0C6.6 2.4 5.5 2.7 5.5 2.7a4.6 4.6 0 0 0-.1 3.5A5 5 0 0 0 4 9.7c0 5.1 3.1 6.3 6.1 6.6a3 3 0 0 0-.9 2.6V21"/></svg>github.com/zulafqarali</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>zulafqarali.github.io</div>
+    </div>
+  </div>
+  <div class="avatar" aria-hidden="true"><span>ZA</span></div>
+</header>
+
+<div class="sec"><h2>PROFESSIONAL SUMMARY</h2></div>
+<p class="summary">Principal Software Engineer with <strong>9+ years</strong> of experience building and scaling backend systems, hands-on with <strong>Python, FastAPI and LangChain</strong> and <strong>LLM-powered features</strong> on <strong>GCP</strong>, plus <strong>Vue</strong> on the frontend and <strong>Kibana / Grafana / Hadoop</strong> for observability and data. Delivered microservices platforms serving millions of users, SuiteCRM solutions with AI-assisted screening and job matching, and real-time QuickBooks synchronization for tax and accounting workflows. Strong in requirements analysis, solution design, REST API development, CI/CD, production debugging, code review and mentoring. Has <strong>led teams of 4 to 6 engineers</strong> and collaborated in cross-functional teams of up to 40. Seeking remote Python / FastAPI backend roles.</p>
+
+<div class="kpis">
+  <div class="kpi"><b>9+ Years</b><span>Backend engineering in PHP</span></div>
+  <div class="kpi"><b>Millions</b><span>Users on platforms delivered (80+ branches)</span></div>
+  <div class="kpi"><b>7,000+</b><span>CRM users, healthcare recruitment platform</span></div>
+  <div class="kpi"><b>4 – 6</b><span>Engineers led per project, on schedule</span></div>
+</div>
+
+<div class="sec"><h2>WORK EXPERIENCE</h2></div>
+
+<div class="job">
+  <div class="job-hd">
+    <div>
+      <div class="title">Principal Software Engineer</div>
+      <div class="co">Tkxel<span class="loc"> · Lahore, Pakistan</span></div>
+    </div>
+    <div class="date">Dec 2022 – Present</div>
+  </div>
+  <ul class="bul">
+    <li>Built backend services on a <strong>Laravel microservices architecture on AWS</strong> powering online ordering across 80+ restaurant branches and millions of users — custom item preparation, loyalty programs, kitchen-to-customer order status updates, payment gateway integrations and delivery workflows.</li>
+    <li>Set up <strong>AWS CI/CD deployment pipelines</strong> for automated releases; debugged and resolved production issues on the live system.</li>
+    <li>Building a <strong>SuiteCRM healthcare recruitment platform</strong> for 7,000+ CRM users with AI-assisted candidate assessments, resume screening, survey generation and profile-to-job matching.</li>
+    <li>Defined solution architecture from client requirements and implemented <strong>eDocs</strong>, a document digitization and e-signature application (team of 12).</li>
+    <li>Analyzed client requirements and translated them into technical solutions within a <strong>40-engineer cross-functional team</strong>.</li>
+    <li>Mentor junior developers, conduct code reviews and enforce coding standards.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-hd">
+    <div>
+      <div class="title">Senior Software Engineer</div>
+      <div class="co">CarSwitch<span class="loc"> · Lahore, Pakistan</span></div>
+    </div>
+    <div class="date">Jan 2022 – Dec 2022</div>
+  </div>
+  <ul class="bul">
+    <li>Translated product-team requirements into technical solutions, breaking down tasks and estimating effort, and delivered application features on time using <strong>PHP and Yii2</strong>.</li>
+    <li>Diagnosed and resolved complex design and technical issues; provided technical support for clients across local and global sites.</li>
+    <li>Delivered internal tech sessions to the engineering team.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-hd">
+    <div>
+      <div class="title">Senior Software Engineer</div>
+      <div class="co">Rolustech<span class="loc"> · Lahore, Pakistan</span></div>
+    </div>
+    <div class="date">Jan 2020 – Jan 2022</div>
+  </div>
+  <ul class="bul">
+    <li>Customized SuiteCRM into <strong>ttgat.us</strong>, a tax audit and accounting platform covering business audits, invoicing, payments and work-progress tracking for <strong>200+ CRM users</strong>.</li>
+    <li>Re-engineered data-processing and accounting-book workflows handling roughly <strong>50 GB of financial data</strong>, and built <strong>real-time, two-way synchronization</strong> with QuickBooks Online.</li>
+    <li>Automated manual insurance and device-repair processes in <strong>Xension</strong>, a custom CRM with role-based access and task assignment for hundreds of users, supporting millions of requests.</li>
+    <li>Led teams of <strong>4 to 6 engineers and QAs</strong> across multiple projects, running daily scrums and bi-weekly sprints and shipping on schedule.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-hd">
+    <div>
+      <div class="title">Software Engineer</div>
+      <div class="co">Rolustech<span class="loc"> · Lahore, Pakistan</span></div>
+    </div>
+    <div class="date">Mar 2017 – Dec 2019</div>
+  </div>
+  <ul class="bul">
+    <li>Worked with development and QA teams to design and build solutions meeting client requirements for <strong>functionality, scalability and performance</strong>.</li>
+    <li>Identified and resolved complex design and technical issues across projects; provided end-user support to clients on local and global sites.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-hd">
+    <div>
+      <div class="title">Web Developer</div>
+      <div class="co">EGlobal Solution<span class="loc"> · Lahore, Pakistan</span></div>
+    </div>
+    <div class="date">Jul 2014 – Jan 2017</div>
+  </div>
+  <ul class="bul">
+    <li>Converted design mockups into working websites using <strong>HTML, JavaScript, AJAX and JSON</strong>.</li>
+    <li>Planned and implemented website changes and integrations to streamline client business operations.</li>
+  </ul>
+</div>
+
+<div class="sec"><h2>TECHNICAL SKILLS</h2></div>
+
+<div class="srow"><b>Core Stack</b><span>Python, FastAPI, Pydantic, AsyncIO, REST APIs, LangChain, LLM APIs (OpenAI, Claude), GCP (Cloud Run, Cloud Functions, Cloud SQL, Pub/Sub)</span></div>
+<div class="srow"><b>AI-Assisted Dev</b><span>GitHub Copilot, Claude Code, JetBrains AI Assistant, ChatGPT Codex, OpenCode, Cursor; Context Writing &amp; Memory Management, Agents &amp; Skill Creation, Prompt Writing &amp; Engineering</span></div>
+<div class="srow"><b>Cloud &amp; DevOps</b><span>GCP, AWS (Aurora, CI/CD pipelines), Docker, GitLab CI/CD, Git, GitHub, Bitbucket</span></div>
+<div class="srow"><b>Frontend</b><span>Vue.js, JavaScript, TypeScript, jQuery, AJAX, HTML5, CSS3, AngularJS</span></div>
+<div class="srow"><b>Backend (PHP)</b><span>PHP, Laravel, Symfony, Yii2, CodeIgniter, Zend; Microservices, OOP, MVC, Design Patterns</span></div>
+<div class="srow"><b>Observability &amp; Data</b><span>Kibana, Grafana, Hadoop, MySQL, AWS Aurora, Redis, MS SQL, SQLite</span></div>
+<div class="srow"><b>CRM &amp; Integrations</b><span>SuiteCRM, SugarCRM, QuickBooks Online API &amp; PHP SDK, Payment gateways, Third-party APIs</span></div>
+<div class="srow"><b>Practices &amp; Tools</b><span>Agile/Scrum, Sprint Planning, Code Review, Requirements Analysis, Solution Design, Technical Mentoring; Jira, Teamwork, Trello, Redmine, PHPStorm</span></div>
+
+<div class="sec"><h2>INDUSTRY DOMAINS</h2></div>
+<div class="domains">Online Ordering &amp; Food Delivery<i>·</i>Healthcare Recruitment<i>·</i>Tax &amp; Accounting<i>·</i>Document Digitization &amp; E-Signature<i>·</i>Insurance &amp; Device Repair<i>·</i>Automotive Marketplace<i>·</i>CRM Platforms</div>
+
+<div class="sec"><h2>CERTIFICATIONS</h2></div>
+<ul class="plain">
+  <li>SugarCRM Developer Certification</li>
+</ul>
+
+<div class="sec"><h2>EDUCATION</h2></div>
+<div class="edu">
+  <div><span class="deg">Bachelor of Science in Computer Science</span><span class="yr">2016</span></div>
+  <div class="inst">The University of Lahore, Pakistan</div>
+</div>
+<div class="note">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.6-3 8.6-7 10-4-1.4-7-5.4-7-10V6z"/><path d="M8.8 12.2l2.2 2.2 4.4-4.6"/></svg>
+  <span><b>Open to Remote:</b> Based in Lahore, Pakistan (UTC+5) — available for remote Python and FastAPI backend roles.</span>
+</div>
+
+<div class="sec"><h2>LANGUAGES</h2></div>
+<div class="langs"><div><b>English</b> — Professional Working Proficiency</div><div><b>Urdu</b> — Native</div></div>
+
+</body>
+</html>
